@@ -504,6 +504,29 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
     /* ------------------------------- */
 
+    .cheaper {
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        max-width: 1020px;
+        padding: 30px 0px 88px 0px;
+
+    }
+
+    .cheaper__img {
+        width: 105px;
+        height: 103px;
+    }
+
+    .cheaper__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #46B1DE;
+
+    }
+
 
     .appintment {
         background-color: rgba(255, 255, 255, 1);
