@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
  @media (max-width: 768px) {
     [class*="__container"] {
         max-width: none;
-        padding: 0px 15px;
+        padding: 0px 5px;
     }
 } 
 
@@ -118,7 +118,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         background:url(img/background.jpg) center no-repeat;
         background-size: cover;
     }
-
+/* -------------------------- */
     .header__container {
         display: flex;
         justify-content: space-between;
@@ -127,26 +127,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         height: 91px; 
         padding: 10px 0px;   
     }
-
-   
-
-    .menu__list {
-        display: flex;
-        gap: 80px;
-    }
-
-    .menu__link  {
-        font-size: 16px;
-        text-align: center;
-        color: rgba(27, 29, 31, 1);
-       
-    }
-
-    .menu__link:hover {
-        text-decoration: underline;
-    }
-
-   
 
     .header__logo {
         display: flex;
@@ -182,38 +162,62 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         height: 38px;
         width: 84px;
     }
-
-    .header__phone {
+/* -------------------------- */
+    .menu__list {
         display: flex;
+        gap: 80px;
+    }
+
+    .menu__link  {
+        font-size: 16px;
+        text-align: center;
+        color: rgba(27, 29, 31, 1);
+    }
+
+    .menu__link:hover {
+        color: #46B1DE;
+    }
+
+/* -------------------------- */
+    .header__phone {
         width: 174px;
-        align-items: center;
-        justify-content: space-between;
+    }
+
+    .phone__link  {
+        position: relative;
+        padding: 0px 10px;
     }
     
     .phone__link a {
         display: inline-block;
-        width: 145px;
+        width: 160px;
         font-size: 16px;
         color: black;
     }
-    .phone__link  {
-        padding: 0px 10px;
-       
+
+    .phone__link a::before {
+        content: url('img/icon/-phone-in-talk_904901.svg');
+        position: absolute;
+        left: -15px;
+        top: -4px;
     }
+    /* ----------------------------- */
 
     .languages a {
         font-weight: 400;
         font-size: 20px;
         color: black;
     }
-    .vr {
+
+    .ua::after {
+        content: '';
         display: inline;
         margin: 10px;
-       font-size: 20px;
+        font-size: 20px;
         border-left: 1px solid #000000;
     }
 
-
+/* ------------------------- */
     .caption {
         padding: 36px 0px 20px 27px;
         margin: 0 auto;
@@ -427,7 +431,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 
     .what__services__title {
-        width: 493px;
+        max-width: 493px;
+        text-align: center;
         margin: 0 auto;
         font-size: 34px;
         line-height: 40px;
@@ -566,32 +571,27 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 
     .form-main-blok__input {
-        display: flex;
-        align-items: center;
         border-radius: 8px;
-        width: 233px;
-        height: 57px;
         background-color: rgba(217, 217, 217, 0.71);
     }
 
-    .input-name__icon {
-        padding: 0px 11px 0px 7px ;
-    }
-
-    .form-main-blok__input-name__icon {
-        display: flex;
-        align-items: center;
-    }
-
-  
-
+   
     .form-main-blok__input-name {
+        border-radius: 8px;
+        width: 233px;
+        height: 57px;
         font-family: 'Roboto';
         font-weight: 500;
         font-size: 19px;
-        padding: 0px 0px 0px 7px;
+        padding: 0px 0px 0px 50px;
         background-color: transparent;
+        position: relative;
+        background: url('./img/user.jpg') 3% 50%  no-repeat;
+       
+    }
 
+    .form-main-blok__input-name:focus {
+        border: solid 2px #46B1DE;
     }
 
     .input-phone__icon {
@@ -606,12 +606,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   
 
     .form-main-blok__input-phone {
+        border-radius: 8px;
+        width: 233px;
+        height: 57px;
         font-family: 'Roboto';
         font-weight: 500;
         font-size: 19px;
-        padding: 0px 0px 0px 7px;
+        padding: 0px 0px 0px 50px;
         background-color: transparent;
+        position: relative;
+        background: url('./img/phone...jpg') 3% 50%  no-repeat;
+    }
 
+    .form-main-blok__input-phone:focus {
+        border: solid 2px #46B1DE;
     }
 
 
@@ -717,6 +725,18 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         color: black;
     }
 
+    .footer__ua::after {
+        content: '';
+        display: inline;
+        margin: 10px;
+        font-size: 20px;
+        border-left: 1px solid #000000;
+    }
+
+    .footer__ua:hover {
+        color: aliceblue;
+    }
+
     .footer__link a {
         font-size: 20px;
         display: inline-block;
@@ -725,6 +745,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
     
     .contacts {
+        
         padding-top: 60px;
     }
 
@@ -734,6 +755,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 
     .contacts__addressa h2 {
+        margin-left:-44px ;
        font-weight: bold;
        font-size: 34px;
     }
@@ -743,7 +765,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 
     .addressa p {
-        line-height: 30px;
+        margin-left: -39px;
+        line-height: 135%;
         font-size: 20px;
 
     }
@@ -752,18 +775,47 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         margin: 10px 0px 10px 0px; 
         align-items: center;
         display: flex;
+        position: relative;
     }
     
     .phone_2 a{
         color: white;
         text-decoration: none;
         font-size: 20px;
-        padding-left: 15px;
+        line-height: 135%
+    }
+    .phone_2 a:hover:after {
+        content: '_____________________';
+        position: absolute;
+        overflow: hidden;
+        top: 10px;
+        right: 2px;
+    }
+
+    .phone__footer::before {
+        content: url(img/phone.png);
+        position: absolute;
+        top: -5px;
+        left: -40px;
+    }
+
+    .instagram__footer::before {
+        content: url(img/instagram.png);
+        position: absolute;
+        top: -5px;
+        left: -40px;
+    }
+
+    .gmail__footer::before {
+        content: url(img/email.png);
+        position: absolute;
+        top: -5px;
+        left: -42px;
     }
     
     
     .mesenger {
-        margin-top: 10px; 
+        margin: 14px 0px 14px -38px;
         display:flex ;
         width: 130px;
         justify-content: space-between;
@@ -808,6 +860,71 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
             font-size: 30px;
             height: 53px;
             width: 270px;
+        }
+
+        .what__services__title {
+            font-size: 35px;
+        }
+        
+        .what__services__blok {
+            padding: 0px 5px;
+            max-width: 992px;
+            min-width: 773px;
+            align-items: center; 
+            margin: 0 auto;
+            
+        }
+        
+        .what__services__text__one {
+            text-align: right;
+        } 
+    
+        .what__services__text__two p {
+            text-align: left;
+        }
+
+        .what__services__part__one {
+            width: 250px;
+            margin: -3px -10px 0px -3px;
+        }
+        
+        .what__services__part__two {
+            width: 225px;
+            margin: -14px -80px 49px -9px;
+        }
+        
+        .what__services__part__three {
+            width: 243px;
+            margin: 31px -37px -6px 15px;
+        }
+
+        .what__services__part__four {
+            width: 200px;
+            margin: 0px 0px -15px -15px;
+        }
+    
+        .what__services__part__five {
+            width: 200px;
+            margin: 11px 0px 60px 17px;
+        }
+    
+        .what__services__part__six {
+            width: 213px;
+            margin: 26px 0px 0px -20px;
+        }
+    
+        .part__title {
+            font-size: 18px;
+        }
+    
+        .what__services__img img{
+            width: 230px;
+            height: 202px;
+        }
+
+        .cheaper {
+            padding: 160px 0px 88px 0px;
+    
         }
     
         }
@@ -898,19 +1015,19 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
           width: 284px; 
       }
     
-      .title h1 {
+       .title h1 {
           font-size: 22px;
           line-height: 130%;
           width: 284px;
       }
     
-    .title h2 {
+      .title h2 {
           font-size: 22px;
           line-height: 130%;
           width: 284px;
        }
     
-    .title p {
+       .title p {
           width: 270px;
           padding-top: 5px;
           font-size: 12px;
@@ -998,6 +1115,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
         .foto img {
             padding: 10px;
+            width: 70%;
+            height: 35%;
         }
 
         .footer__container {
@@ -1043,26 +1162,157 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         }
     
         .contacts__addressa h2 {
+            margin: 0px;
             font-size: 21px;
             line-height: 25px;
         }
-        
-    
+
         .addressa p {
+            margin: 0px;
             font-size: 17.1613px;
             line-height: 135%;
             padding: 6px 0px;
         }
     
         .phone_2 a{
+            margin: 0px 0px 0px 26px;
             font-size: 17.1613px;
             line-height: 135%;
         }
-        
+        .phone__footer::before {
+            content: url(img/phone.png);
+            position: absolute;
+            top: -5px;
+            left: -5px;
+        }
+    
+        .instagram__footer::before {
+            content: url(img/instagram.png);
+            position: absolute;
+            top: -5px;
+            left: -5px;
+        }
+    
+        .gmail__footer::before {
+            content: url(img/email.png);
+            position: absolute;
+            top: -5px;
+            left: -6px;
+        }
+
+        .mesenger {
+            margin: 14px 0px 14px -5px;
+        }
         
         .copyright {
             padding: 36px 44px 36px 0px;
         } 
+
+        .what__services__title {
+            font-size: 30px;
+        }
+        
+        .what__services__blok {
+            padding: 0px 5px;
+            min-width: 320px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            
+        }
+        .what__services__text__one {
+            text-align: initial;
+        } 
+    
+        .what__services__text__two p {
+            text-align: initial;
+        }
+
+        .what__services__part__one p{
+            text-align: left;
+            width: 295px;
+       }    
+
+       .what__services__part__one{
+        border-left: solid 3px #46B1DE;
+       } 
+            
+        .what__services__part__two {
+            text-align: right;
+            width: 295px;
+            height: 127px;
+            margin: 0px;
+            border-right: solid 3px #46B1DE;
+        }
+        
+        .what__services__part__three {
+            width: 295px;
+            height: 127px;
+            margin: 0px; 
+            border-left: solid 3px #46B1DE;
+        }
+        .what__services__part__three h3{
+            text-align: left;
+        }
+
+        .what__services__part__three p{
+            text-align: left;
+        }
+
+
+        .what__services__part__four p{
+            text-align: right;
+        }
+
+        .what__services__part__four h3{
+            text-align: right;
+        }
+
+        .what__services__part__four {
+            width: 276px;
+            height: 127px;
+            margin: 10px 0px 0px 0px;
+            border-right: solid 3px #46B1DE;
+        }
+    
+        .what__services__part__five {
+            width: 276px;
+            height: 127px;
+            margin: 10px 0px 0px 0px;
+            border-left: solid 3px #46B1DE;
+        }
+
+        .what__services__part__five p{
+            text-align: left;
+        }
+
+        .what__services__part__five h3{
+            text-align: left;
+        }
+    
+        .what__services__part__six {
+            width: 299px;
+            height: 127px;
+            margin: 10px 0px 0px 0px;
+            border-right: solid 3px #46B1DE;
+        }
+
+        .what__services__part__six p{
+            text-align: right;
+        }
+
+        .what__services__part__six h3{
+            text-align: right;
+        }
+
+        [class*="what__services__part__"]{
+            padding: 15px 5px;   
+        }
+
+        .what__services__img {
+           display: none;
+        }
+    
    }
 
    
