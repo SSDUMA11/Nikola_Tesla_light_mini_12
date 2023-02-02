@@ -733,7 +733,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         border-left: 1px solid #000000;
     }
 
-    .footer__ua:hover {
+    .footer__link a:hover {
         color: aliceblue;
     }
 
@@ -878,10 +878,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         .what__services__text__one {
             text-align: right;
         } 
-    
-        .what__services__text__two p {
-            text-align: left;
-        }
 
         .what__services__part__one {
             width: 250px;
