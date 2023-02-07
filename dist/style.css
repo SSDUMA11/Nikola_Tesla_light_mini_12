@@ -230,6 +230,10 @@ h1, h2, h3, h4, h5, h6 {
   border-left: 1px solid #0f2d4a;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .caption {
   padding: 36px 0px 20px 27px;
   margin: 0 auto;
@@ -1191,12 +1195,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 8px;
   }
   .header__container .header__phone {
-    display: flex;
-    align-items: flex-end;
     width: 127px;
     height: 30px;
-    gap: 10px;
-    flex-direction: column;
   }
 
   .header__logo .header__foto img {
@@ -1215,16 +1215,21 @@ h1, h2, h3, h4, h5, h6 {
     height: 16px;
   }
 
+  .hamburger-menu {
+    margin: 0 auto;
+    display: flex;
+    width: 280px;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
   #menu__toggle {
     opacity: 0;
   }
 
   .menu__btn {
     display: flex;
-    align-items: center;
-    position: fixed;
-    top: 65px;
-    left: 295px;
+    position: absolute;
     width: 26px;
     height: 26px;
     cursor: pointer;

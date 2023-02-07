@@ -226,6 +226,9 @@ $white-color:rgba(255, 255, 255, 1);
         border-left: 1px solid $blak-color;
     }
 }
+.hamburger-menu{
+    display: none;
+}
 .caption {
     
     padding: 36px 0px 20px 27px;
@@ -1273,12 +1276,8 @@ $white-color:rgba(255, 255, 255, 1);
             padding-left: 8px;
         }
         .header__phone {
-            display: flex;
-            align-items: flex-end;
             width: 127px;
             height: 30px;
-            gap: 10px;
-            flex-direction: column;
         }
     }
 
@@ -1300,6 +1299,14 @@ $white-color:rgba(255, 255, 255, 1);
         }
     }
     //===================================
+
+    .hamburger-menu{
+        margin: 0 auto;
+        display: flex;
+        width: 280px;
+        justify-content: flex-end;
+        gap: 10px;
+    }
     
     #menu__toggle {
         opacity: 0;
@@ -1307,10 +1314,10 @@ $white-color:rgba(255, 255, 255, 1);
 
     .menu__btn {
         display: flex; 
-        align-items: center;  
-        position: fixed;
-        top: 65px;
-        left: 295px;
+        // align-items: center;  
+        position: absolute;
+        // top: 65px;
+        // left: 90%;
         width: 26px;
         height: 26px;
         cursor: pointer;
