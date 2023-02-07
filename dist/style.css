@@ -1172,7 +1172,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 160px 0px 88px 0px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) and (max-width: 768px) {
   .first-screen {
     padding: 30px 5px 5px 5px;
     height: 568px;
@@ -1215,52 +1215,65 @@ h1, h2, h3, h4, h5, h6 {
     height: 16px;
   }
 
-  .header__burger {
-    margin: 0px 20px 0px 0px;
-    padding-top: 18px;
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  .menu__btn {
     display: flex;
-    position: relative;
-    width: 30px;
-    height: 20px;
+    align-items: center;
+    position: fixed;
+    top: 65px;
+    left: 295px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
   }
-  .header__burger span {
-    display: inline-block;
-    background-color: #0f2d4a;
+
+  .menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
     position: absolute;
     width: 100%;
     height: 2px;
-    top: 9px;
-  }
-  .header__burger::before {
-    top: 0;
-    content: "";
     background-color: #0f2d4a;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
   }
-  .header__burger::after {
-    bottom: 0;
-    content: "";
-    background-color: #0f2d4a;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-  }
-  .header__burger:active::after {
+
+  .menu__btn > span:hover,
+.menu__btn > span:hover::before,
+.menu__btn > span:hover:after {
     background-color: #46B1DE;
-    transform: rotate(-45deg);
-    bottom: 9px;
   }
-  .header__burger:active::before {
-    background-color: #46B1DE;
+
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
-    top: 9px;
   }
-  .header__burger span:active {
-    width: 0px;
+
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
   }
 
   .header__menu {
@@ -1285,20 +1298,17 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     width: 284px;
   }
-
-  .title h1 {
+  .caption .title h1 {
     font-size: 22px;
     line-height: 130%;
     width: 284px;
   }
-
-  .title h2 {
+  .caption .title h2 {
     font-size: 22px;
     line-height: 130%;
     width: 284px;
   }
-
-  .title p {
+  .caption .title p {
     width: 270px;
     padding-top: 5px;
     font-size: 12px;
@@ -1338,6 +1348,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 199px;
   }
 
+  .page {
+    margin-top: 30px;
+  }
+
   .blok {
     display: none;
   }
@@ -1368,9 +1382,11 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     flex-wrap: wrap;
   }
-
-  .what__services__text__one {
+  .what__services__blok .what__services__text__one {
     text-align: initial;
+  }
+  .what__services__blok .what__services__img {
+    display: none;
   }
 
   .what__services__text__two p {
@@ -1559,10 +1575,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 5px;
   }
 
-  .what__services__blok .what__services__img {
-    display: none;
-  }
-
   .cotent-main-blok__form {
     min-height: 216px;
     flex-direction: column;
@@ -1572,7 +1584,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 320px;
     flex-direction: column;
   }
-
   .foto img {
     padding: 10px;
     width: 70%;
@@ -1590,32 +1601,27 @@ h1, h2, h3, h4, h5, h6 {
     width: 303.28px;
     height: 64.91px;
   }
-
-  .footer__foto img {
+  .footer__logo .footer__foto img {
     width: 55.33px;
     height: 57.46px;
   }
-
-  .footer__row p {
+  .footer__logo .footer__row p {
     font-size: 27px;
   }
-
-  .footer__row span {
+  .footer__logo .footer__row span {
     font-size: 19.1523px;
-  }
-
-  .working h4 {
-    font-size: 14.2648px;
-    line-height: 17px;
-  }
-
-  .working p {
-    font-size: 14.2648px;
-    line-height: 135%;
   }
 
   .working {
     margin-left: 100px;
+  }
+  .working h4 {
+    font-size: 14.2648px;
+    line-height: 17px;
+  }
+  .working p {
+    font-size: 14.2648px;
+    line-height: 135%;
   }
 
   .footer__link a {
@@ -1634,7 +1640,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 135%;
     padding: 6px 0px;
   }
-
   .contacts__addressa h2 {
     margin: 0px;
     font-size: 21px;
